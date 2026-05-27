@@ -1,0 +1,13 @@
+node_modules
+**/node_modules
+.git
+.next
+**/.next
+.turbo
+**/.turbo
+*.md
+.env
+.env.*
+!.env.example
+apps/web/.env*
+.DS_Store
