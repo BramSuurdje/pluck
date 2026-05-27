@@ -84,13 +84,16 @@ Without S3 configured, finished files are served from the app (`DOWNLOAD_DIR`, d
 
 ### Docker
 
+Copy env first (Compose loads `.env` into the container; secrets stay out of `docker-compose.yml`):
+
 ```bash
+cp .env.example .env
 docker compose up --build
 ```
 
 Health check: `GET /api/health` (verifies yt-dlp and ffmpeg).
 
-Optional MinIO for S3 testing: `docker compose --profile storage up -d`.
+Optional MinIO for S3 testing: set `MINIO_ROOT_USER` and `MINIO_ROOT_PASSWORD` in `.env`, then `docker compose --profile storage up -d`.
 
 ### Environment
 
