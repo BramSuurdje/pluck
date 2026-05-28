@@ -1,3 +1,5 @@
+<img width="1920" height="1280" alt="431shots_so" src="https://github.com/user-attachments/assets/07ba5e59-fddc-4096-b982-274783efe825" />
+
 # Pluck
 
 A small, self-hosted media downloader: paste a link, pick a format, and save the file. No accounts, no queue UI beyond a single job at a time.
