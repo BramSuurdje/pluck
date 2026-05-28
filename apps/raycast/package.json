@@ -1,0 +1,92 @@
+{
+  "name": "pluck",
+  "title": "Pluck",
+  "description": "Download media from the active browser tab with Pluck",
+  "icon": "extension-icon.png",
+  "author": "bramsuurdje",
+  "version": "v1.0.0",
+  "categories": [
+    "Productivity",
+    "Applications"
+  ],
+  "license": "MIT",
+  "commands": [
+    {
+      "name": "download-from-tab",
+      "title": "Download from Tab",
+      "description": "Get the active tab URL, run Pluck, and save the file to Downloads",
+      "mode": "no-view",
+      "keywords": [
+        "pluck",
+        "download",
+        "youtube",
+        "video",
+        "tab",
+        "browser",
+        "yt-dlp"
+      ]
+    }
+  ],
+  "preferences": [
+    {
+      "name": "webUrl",
+      "type": "textfield",
+      "required": true,
+      "title": "Pluck URL",
+      "description": "Your Pluck server (no trailing slash)",
+      "default": "http://localhost:3000",
+      "placeholder": "https://pluck.example.com"
+    },
+    {
+      "name": "preset",
+      "type": "dropdown",
+      "required": true,
+      "title": "Format",
+      "description": "Quality preset passed to Pluck",
+      "default": "720p",
+      "data": [
+        {
+          "title": "1080p (MP4)",
+          "value": "1080p"
+        },
+        {
+          "title": "720p (MP4)",
+          "value": "720p"
+        },
+        {
+          "title": "480p (MP4)",
+          "value": "480p"
+        },
+        {
+          "title": "Music only (MP3)",
+          "value": "audio"
+        }
+      ]
+    },
+    {
+      "name": "appPassword",
+      "type": "password",
+      "required": false,
+      "title": "Server password",
+      "description": "Only if your Pluck server uses APP_PASSWORD"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.83.1"
+  },
+  "devDependencies": {
+    "@raycast/eslint-config": "^1.0.11",
+    "@types/node": "22.5.4",
+    "@types/react": "18.3.3",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.5.4"
+  },
+  "scripts": {
+    "build": "ray build --skip-types -e dist -o dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "generate-icon": "npm run generate-icon --prefix ../web",
+    "lint": "ray lint"
+  }
+}
