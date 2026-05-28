@@ -1,4 +1,4 @@
-<img width="1920" height="1280" alt="431shots_so" src="https://github.com/user-attachments/assets/07ba5e59-fddc-4096-b982-274783efe825" />
+<img width="1920" height="1280" alt="854shots_so" src="https://github.com/user-attachments/assets/9018e46e-f7f0-442a-9f90-c87263320e0b" />
 
 # Pluck
 
