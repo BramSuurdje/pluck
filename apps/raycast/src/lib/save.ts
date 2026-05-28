@@ -60,8 +60,8 @@ export async function saveJobToDownloads(
   const fileName = sanitizeFileName(job.fileName ?? "download")
   const downloadsDir = join(homedir(), "Downloads")
   const filePath = await uniquePath(downloadsDir, fileName)
-  const buffer = Buffer.from(await response.arrayBuffer())
+  const bytes = new Uint8Array(await response.arrayBuffer())
 
-  await writeFile(filePath, buffer)
+  await writeFile(filePath, bytes)
   return filePath
 }

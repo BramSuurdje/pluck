@@ -52,9 +52,19 @@ In **Extensions → Pluck → Preferences**:
 
 ## Usage
 
+### Download from Tab
+
 1. Open the video or audio page in your browser (tab must be active).
 2. Run **Download from Tab** in Raycast (optionally bind a hotkey).
-3. The extension reads the tab URL, creates a Pluck job, polls until finished, then writes the file to `~/Downloads`.
+3. Uses the active tab URL and the **Format** from extension preferences.
+
+### Download from URL
+
+1. Run **Download from URL** in Raycast.
+2. Enter the link in the **url** field.
+3. Optionally pick **Format** in the argument dropdown; if omitted, uses the **Format** preference.
+
+Both commands create a Pluck job, poll until finished, then save to `~/Downloads`.
 
 ## Notes
 
