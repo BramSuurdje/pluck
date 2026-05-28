@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate Pluck favicons and PWA icons (primary background, white letter)."""
+"""Generate Pluck favicons, PWA icons, and the Raycast extension icon."""
 
 import urllib.request
 from pathlib import Path
@@ -9,6 +9,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "scripts" / "assets"
 PUBLIC = ROOT / "public"
+RAYCAST_ICON = ROOT.parent / "raycast" / "assets" / "extension-icon.png"
 FONT_PATH = ASSETS / "LeckerliOne.ttf"
 FONT_URL = (
     "https://fonts.gstatic.com/s/leckerlione/v21/"
@@ -88,6 +89,10 @@ def main() -> None:
         append_images=ico_images[1:],
     )
     print(ico_path)
+
+    RAYCAST_ICON.parent.mkdir(parents=True, exist_ok=True)
+    master.save(RAYCAST_ICON, "PNG")
+    print(RAYCAST_ICON)
 
 
 if __name__ == "__main__":

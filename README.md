@@ -62,6 +62,7 @@ The app spawns **yt-dlp** as a child process and tracks progress from its output
 ```
 apps/
   web/       Next.js app: downloader UI, API routes, retention worker
+  raycast/   Raycast command: download from active browser tab → ~/Downloads
 packages/
   ui/        Reusable UI components (shadcn-style)
   eslint-config/
