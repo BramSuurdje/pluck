@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Geist, Geist_Mono, Figtree, Roboto_Slab } from "next/font/google"
+import Script from "next/script"
 
 import "@workspace/ui/globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
@@ -58,6 +59,11 @@ export default function RootLayout({
       className={cn("antialiased", fontMono.variable, "font-sans", figtree.variable, robotoSlabHeading.variable)}
     >
       <body>
+        <Script
+          src="https://analytics.bramsuurd.nl/api/script.js"
+          data-site-id="78ee197666d5"
+          strategy="afterInteractive"
+        />
         <ThemeProvider>
           {children}
           <Toaster position="top-center" richColors closeButton />
