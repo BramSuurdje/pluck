@@ -60,7 +60,7 @@ export default function RootLayout({
     >
       <body>
         <Script
-          src="https://analytics.bramsuurd.nl/api/script.js"
+          src="https://z.bramsuurd.nl/api/script.js"
           data-site-id="78ee197666d5"
           strategy="afterInteractive"
         />
